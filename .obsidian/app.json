@@ -1,0 +1,16 @@
+{
+  "livePreview": false,
+  "readableLineLength": false,
+  "strictLineBreaks": true,
+  "foldHeading": false,
+  "foldIndent": false,
+  "showLineNumber": true,
+  "smartIndentList": false,
+  "useTab": false,
+  "spellcheck": false,
+  "promptDelete": false,
+  "alwaysUpdateLinks": true,
+  "useMarkdownLinks": true,
+  "showUnsupportedFiles": true,
+  "attachmentFolderPath": "attachments"
+}

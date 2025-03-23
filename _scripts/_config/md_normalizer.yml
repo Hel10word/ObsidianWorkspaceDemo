@@ -1,0 +1,96 @@
+# 标点符号映射
+punctuation_mapping:
+  "，": ","
+  "。": "."
+  "：": ":"
+  "！": "!"
+  "？": "?"
+  "‘": "'"
+  "’": "'"
+  "“": "\""
+  "”": "\""
+  "（": "("
+  "）": ")"
+  "【": "["
+  "】": "]"
+  "《": "<"
+  "》": ">"
+  "、": ","
+  "；": ";"
+  "…": "..."
+  "「": "["
+  "」": "]"
+  "『": "["
+  "』": "]"
+  "\t": "    "
+
+# 标点符号空格规则
+punctuation_spacing:
+  before_space: true # 标点符号前添加空格
+  after_space: true # 标点符号后添加空格
+  exceptions:
+    # 这些标点符号后面不添加空格
+    no_space_after:
+      - "("
+      - "["
+      - "{"
+      - "<"
+    # 这些标点符号前面不添加空格
+    no_space_before:
+      - ")"
+      - "]"
+      - "}"
+      - ">"
+
+# 文件和目录命名规则
+naming_rules:
+  # 目录命名规则
+  directories:
+    pattern: "^[A-Z0-9\\u4e00-\\u9fa5][a-zA-Z0-9\\u4e00-\\u9fa5_\\.-]*$" # 驼峰命名
+    no_spaces: true
+
+  # 文件命名规则
+  files:
+    pattern: "^[A-Z0-9\\u4e00-\\u9fa5][a-zA-Z0-9\\u4e00-\\u9fa5_\\.-]*$"
+    no_spaces: true
+    special_rules:
+      excalidraw:
+        pattern: "^.+\\.excalidraw$"
+        require_reference: true
+
+  # 附件目录命名规则
+  attachments:
+    pattern: "^[a-zA-Z\\u4e00-\\u9fa5][a-zA-Z0-9\\u4e00-\\u9fa5_\\.-]*$"
+    no_spaces: true
+    dirname: "attachments"
+
+# 元数据规则
+metadata_rules:
+  tags:
+    lowercase: true
+    word_separator: "-"
+    category_separator: "/"
+
+# 验证选项 - 控制哪些验证功能开启
+validation_options:
+  punctuation: true      # 验证标点符号
+  metadata: true         # 验证元数据
+  filenames: true        # 验证文件名
+  directories: true      # 验证目录名
+  attachments: true      # 验证附件
+  excalidraw: true       # 验证Excalidraw引用
+
+# 遍历目录设置
+scan_directories:
+  - "KnowledgeMaps"
+  - "KnowledgeMatrix"
+  - "LifeDashboard"
+  - "ThoughtFragments"
+  - "WisdomVault"
+
+# 排除目录
+exclude_directories:
+  - ".git"
+  - ".obsidian"
+  - "_scripts"
+  - "_templates"
